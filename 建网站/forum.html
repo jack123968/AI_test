@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交流论坛 - 遗常在</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forum.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>遗常在</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="market.html">交易市场</a></li>
+                    <li><a href="forum.html" class="active">交流论坛</a></li>
+                    <li><a href="culture.html">非遗文化</a></li>
+                    <li><a href="profile.html">个人中心</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 论坛主体 -->
+    <main class="forum-main">
+        <div class="container">
+            <!-- 论坛板块导航 -->
+            <div class="forum-nav">
+                <div class="forum-search">
+                    <input type="text" placeholder="搜索帖子...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button class="new-post-btn"><i class="fas fa-edit"></i> 发布新帖</button>
+            </div>
+
+            <!-- 论坛板块列表 -->
+            <div class="forum-sections">
+                <div class="section-card">
+                    <div class="section-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="section-info">
+                        <h3>交易心得</h3>
+                        <p>分享非遗物品交易经验，探讨收藏技巧</p>
+                        <div class="section-stats">
+                            <span><i class="fas fa-file-alt"></i> 帖子：128</span>
+                            <span><i class="fas fa-eye"></i> 今日：25</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="section-info">
+                        <h3>非遗文化</h3>
+                        <p>探讨非物质文化遗产的历史与传承</p>
+                        <div class="section-stats">
+                            <span><i class="fas fa-file-alt"></i> 帖子：256</span>
+                            <span><i class="fas fa-eye"></i> 今日：42</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="section-info">
+                        <h3>新手指南</h3>
+                        <p>新手交流区，解答常见问题</p>
+                        <div class="section-stats">
+                            <span><i class="fas fa-file-alt"></i> 帖子：96</span>
+                            <span><i class="fas fa-eye"></i> 今日：18</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="section-info">
+                        <h3>技艺交流</h3>
+                        <p>非遗技艺交流，经验分享</p>
+                        <div class="section-stats">
+                            <span><i class="fas fa-file-alt"></i> 帖子：168</span>
+                            <span><i class="fas fa-eye"></i> 今日：35</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 热门帖子 -->
+            <div class="hot-posts">
+                <h2 class="section-title"><i class="fas fa-fire"></i> 热门帖子</h2>
+                <div class="post-list">
+                    <div class="post-item">
+                        <div class="post-meta">
+                            <img src="images/avatars/default.jpg" alt="用户头像" class="user-avatar">
+                            <span class="post-author">张三丰</span>
+                            <span class="post-time">2小时前</span>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">【经验分享】如何鉴别真正的景德镇陶瓷</h3>
+                            <p class="post-excerpt">分享多年收藏经验，教你从纹样、釉色等方面识别真品...</p>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 1280</span>
+                                <span><i class="fas fa-comment"></i> 46</span>
+                                <span><i class="fas fa-heart"></i> 128</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-item">
+                        <div class="post-meta">
+                            <img src="images/avatars/default.jpg" alt="用户头像" class="user-avatar">
+                            <span class="post-author">李四</span>
+                            <span class="post-time">5小时前</span>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">【技艺传承】苏绣技法详解与教程</h3>
+                            <p class="post-excerpt">详细图解苏绣基本针法，从入门到进阶的完整教程...</p>
+                            <div class="post-stats">
+                                <span><i class="fas fa-eye"></i> 960</span>
+                                <span><i class="fas fa-comment"></i> 32</span>
+                                <span><i class="fas fa-heart"></i> 96</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 发帖弹窗 -->
+    <div class="post-modal" id="postModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>发布新帖</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="newPostForm">
+                    <div class="form-group">
+                        <label>选择板块：</label>
+                        <select required>
+                            <option value="">请选择板块</option>
+                            <option value="trade">交易心得</option>
+                            <option value="culture">非遗文化</option>
+                            <option value="guide">新手指南</option>
+                            <option value="skill">技艺交流</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>标题：</label>
+                        <input type="text" placeholder="请输入标题（5-50字）" required>
+                    </div>
+                    <div class="form-group">
+                        <label>内容：</label>
+                        <textarea placeholder="请输入帖子内容..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>添加图片：</label>
+                        <div class="upload-area">
+                            <input type="file" multiple accept="image/*">
+                            <div class="upload-tip">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>点击或拖拽图片到此处</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <button type="submit" class="submit-btn">发布</button>
+                        <button type="button" class="cancel-btn">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于我们</h4>
+                    <p>遗常在致力于传承和发展中国非物质文化遗产，搭建非遗物品交易和文化交流的平台。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>
+                        <i class="fas fa-phone"></i> 400-123-4567<br>
+                        <i class="fas fa-envelope"></i> contact@yichangzai.com
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 遗常在. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/forum.js"></script>
+</body>
+</html> 

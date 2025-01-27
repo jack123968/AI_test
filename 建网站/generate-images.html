@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成商品示例图片</title>
+    <style>
+        body {
+            font-family: "楷体", KaiTi, "宋体", SimSun, serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #F5F5DC;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #8B4513;
+            margin-bottom: 40px;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.1);
+            position: relative;
+        }
+        h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #8B4513;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .preview img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        .category-title {
+            color: #8B4513;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #F5DEB3;
+            font-size: 24px;
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+        }
+        .category-title::before {
+            content: '◆';
+            margin-right: 10px;
+            color: #DEB887;
+        }
+        .download-tip {
+            text-align: center;
+            color: #666;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #FFF8DC;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>非遗商品示例图片生成器</h1>
+        <div id="preview" class="preview">
+            <!-- 图片将在这里显示 -->
+        </div>
+        <div class="download-tip">
+            提示：图片会自动下载到您的下载文件夹中。生成的图片仅供测试使用，请在实际应用中替换为真实的商品图片。
+        </div>
+    </div>
+    <script src="js/generate-images.js"></script>
+    <script>
+        // 显示生成的图片
+        function displayImages(images) {
+            const preview = document.getElementById('preview');
+            for (const category in images) {
+                const categoryTitle = document.createElement('h2');
+                categoryTitle.className = 'category-title';
+                categoryTitle.textContent = {
+                    'paper-cut': '剪纸艺术',
+                    'painting': '传统绘画',
+                    'ceramics': '景德镇陶瓷',
+                    'woodcarving': '木雕工艺',
+                    'embroidery': '刺绣织品',
+                    'lacquer': '漆器工艺'
+                }[category];
+                preview.appendChild(categoryTitle);
+
+                images[category].forEach(imageData => {
+                    const img = document.createElement('img');
+                    img.src = imageData;
+                    img.alt = `${category} preview`;
+                    preview.appendChild(img);
+                });
+            }
+        }
+
+        // 当页面加载完成后显示图片
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = generateAllProductImages();
+            displayImages(images);
+        });
+    </script>
+</body>
+</html> 

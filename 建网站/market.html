@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交易市场 - 遗常在</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/market.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>遗常在</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="market.html" class="active">交易市场</a></li>
+                    <li><a href="forum.html">交流论坛</a></li>
+                    <li><a href="culture.html">非遗文化</a></li>
+                    <li><a href="profile.html">个人中心</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 分类导航 -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-list">
+                <div class="category-item active">
+                    <i class="fas fa-cut"></i>
+                    <span>剪纸艺术</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>传统绘画</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-gem"></i>
+                    <span>景德镇陶瓷</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-tree"></i>
+                    <span>木雕工艺</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-tshirt"></i>
+                    <span>刺绣织品</span>
+                </div>
+                <div class="category-item">
+                    <i class="fas fa-palette"></i>
+                    <span>漆器工艺</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 筛选工具栏 -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-tools">
+                <div class="filter-group">
+                    <label>价格区间：</label>
+                    <select>
+                        <option value="">全部</option>
+                        <option value="0-500">500元以下</option>
+                        <option value="500-2000">500-2000元</option>
+                        <option value="2000-5000">2000-5000元</option>
+                        <option value="5000+">5000元以上</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>排序方式：</label>
+                    <select>
+                        <option value="newest">最新上架</option>
+                        <option value="price-asc">价格从低到高</option>
+                        <option value="price-desc">价格从高到低</option>
+                        <option value="sales">销量优先</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>商品状态：</label>
+                    <select>
+                        <option value="all">全部</option>
+                        <option value="in-stock">现货</option>
+                        <option value="pre-order">预订</option>
+                        <option value="custom">定制</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商品列表 -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- 商品卡片示例 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/paper-cut1.jpg" alt="传统剪纸作品">
+                        <div class="product-tags">
+                            <span class="tag new">新品</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">喜庆剪纸套装</h3>
+                        <p class="product-desc">传统手工剪纸，精美窗花，年节装饰必备</p>
+                        <div class="product-meta">
+                            <span class="price">¥299</span>
+                            <span class="sales">已售 128</span>
+                        </div>
+                        <div class="product-footer">
+                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i> 加入购物车</button>
+                            <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 更多商品卡片将通过 JavaScript 动态添加 -->
+            </div>
+
+            <!-- 分页 -->
+            <div class="pagination">
+                <button class="prev-page"><i class="fas fa-chevron-left"></i></button>
+                <div class="page-numbers">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>10</span>
+                </div>
+                <button class="next-page"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 购物车侧边栏 -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> 购物车</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- 购物车商品将通过 JavaScript 动态添加 -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>总计：</span>
+                <span class="total-price">¥0</span>
+            </div>
+            <button class="btn-checkout">结算</button>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于我们</h4>
+                    <p>遗常在致力于传承和发展中国非物质文化遗产，搭建非遗物品交易和文化交流的平台。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>
+                        <i class="fas fa-phone"></i> 400-123-4567<br>
+                        <i class="fas fa-envelope"></i> contact@yichangzai.com
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 遗常在. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/market.js"></script>
+</body>
+</html> 

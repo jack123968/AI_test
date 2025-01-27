@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非遗文化 - 遗常在</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/culture.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>遗常在</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="market.html">交易市场</a></li>
+                    <li><a href="forum.html">交流论坛</a></li>
+                    <li><a href="culture.html" class="active">非遗文化</a></li>
+                    <li><a href="profile.html">个人中心</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="culture-main">
+        <!-- 文化介绍横幅 -->
+        <section class="culture-banner">
+            <div class="container">
+                <h2>传承千年文化，守护民族瑰宝</h2>
+                <p>非物质文化遗产是人类智慧的结晶，是中华文明的重要组成部分</p>
+            </div>
+        </section>
+
+        <!-- 分类导航 -->
+        <section class="category-nav">
+            <div class="container">
+                <ul class="category-list">
+                    <li class="active" data-category="all">全部</li>
+                    <li data-category="crafts">传统工艺</li>
+                    <li data-category="art">传统艺术</li>
+                    <li data-category="medicine">传统医药</li>
+                    <li data-category="custom">民俗文化</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 文化内容展示 -->
+        <section class="culture-content">
+            <div class="container">
+                <!-- 传统工艺 -->
+                <div class="culture-grid" data-category="crafts">
+                    <article class="culture-card">
+                        <div class="culture-image">
+                            <img src="images/culture/ceramics.jpg" alt="景德镇陶瓷">
+                        </div>
+                        <div class="culture-info">
+                            <h3>景德镇陶瓷</h3>
+                            <p>景德镇素有"瓷都"之称，千年窑火传承着中国陶瓷文化的精髓。</p>
+                            <div class="culture-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 江西省景德镇市</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2006年列入首批国家级非遗名录</span>
+                            </div>
+                            <a href="#" class="read-more">了解更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="culture-card">
+                        <div class="culture-image">
+                            <img src="images/culture/embroidery.jpg" alt="苏绣">
+                        </div>
+                        <div class="culture-info">
+                            <h3>苏绣</h3>
+                            <p>苏绣以其精细的针法、优美的图案和浓郁的艺术特色闻名于世。</p>
+                            <div class="culture-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 江苏省苏州市</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2006年列入首批国家级非遗名录</span>
+                            </div>
+                            <a href="#" class="read-more">了解更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 传统艺术 -->
+                <div class="culture-grid" data-category="art">
+                    <article class="culture-card">
+                        <div class="culture-image">
+                            <img src="images/culture/paper-cut.jpg" alt="剪纸艺术">
+                        </div>
+                        <div class="culture-info">
+                            <h3>中国剪纸</h3>
+                            <p>剪纸艺术是中国最普及的民间艺术形式之一，具有深厚的文化内涵。</p>
+                            <div class="culture-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 全国各地</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2009年列入人类非物质文化遗产名录</span>
+                            </div>
+                            <a href="#" class="read-more">了解更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="culture-card">
+                        <div class="culture-image">
+                            <img src="images/culture/painting.jpg" alt="国画">
+                        </div>
+                        <div class="culture-info">
+                            <h3>中国画</h3>
+                            <p>中国画以其独特的笔墨语言和艺术表现形式，展现着东方艺术的魅力。</p>
+                            <div class="culture-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 全国各地</span>
+                                <span><i class="fas fa-calendar-alt"></i> 传承千年的艺术瑰宝</span>
+                            </div>
+                            <a href="#" class="read-more">了解更多 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 文化传承 -->
+        <section class="culture-inheritance">
+            <div class="container">
+                <h2 class="section-title">文化传承</h2>
+                <div class="inheritance-grid">
+                    <div class="inheritance-card">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>技艺培训</h3>
+                        <p>开展非遗技艺培训课程，培养新一代传承人</p>
+                    </div>
+                    <div class="inheritance-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>文化保护</h3>
+                        <p>建立完善的非遗保护机制，确保文化永续传承</p>
+                    </div>
+                    <div class="inheritance-card">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <h3>文化传播</h3>
+                        <p>通过多种渠道推广非遗文化，扩大社会影响</p>
+                    </div>
+                    <div class="inheritance-card">
+                        <i class="fas fa-users"></i>
+                        <h3>社区参与</h3>
+                        <p>鼓励社区参与非遗保护，共建文化家园</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于我们</h4>
+                    <p>遗常在致力于传承和发展中国非物质文化遗产，搭建非遗物品交易和文化交流的平台。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>
+                        <i class="fas fa-phone"></i> 400-123-4567<br>
+                        <i class="fas fa-envelope"></i> contact@yichangzai.com
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 遗常在. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/culture.js"></script>
+</body>
+</html> 

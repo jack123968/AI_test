@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - 遗常在</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>遗常在</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="market.html">交易市场</a></li>
+                    <li><a href="forum.html">交流论坛</a></li>
+                    <li><a href="culture.html">非遗文化</a></li>
+                    <li><a href="profile.html" class="active">个人中心</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 用户中心主体 -->
+    <main class="profile-main">
+        <div class="container">
+            <!-- 用户信息卡片 -->
+            <div class="profile-header">
+                <div class="user-card">
+                    <div class="user-avatar">
+                        <img src="images/avatar.jpg" alt="用户头像">
+                        <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <div class="user-info">
+                        <h2>张三 <span class="edit-name"><i class="fas fa-edit"></i></span></h2>
+                        <p class="user-id">ID: 10086</p>
+                        <p class="user-level">等级：非遗守护者 Lv.3</p>
+                        <div class="user-stats">
+                            <span><i class="fas fa-shopping-cart"></i> 订单：12</span>
+                            <span><i class="fas fa-heart"></i> 收藏：24</span>
+                            <span><i class="fas fa-comment"></i> 评论：36</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 功能区域 -->
+            <div class="profile-content">
+                <!-- 侧边导航 -->
+                <aside class="profile-nav">
+                    <ul>
+                        <li class="active" data-tab="orders">
+                            <i class="fas fa-shopping-bag"></i> 我的订单
+                        </li>
+                        <li data-tab="favorites">
+                            <i class="fas fa-heart"></i> 我的收藏
+                        </li>
+                        <li data-tab="messages">
+                            <i class="fas fa-envelope"></i> 消息通知
+                            <span class="badge">3</span>
+                        </li>
+                        <li data-tab="settings">
+                            <i class="fas fa-cog"></i> 账号设置
+                        </li>
+                        <li data-tab="address">
+                            <i class="fas fa-map-marker-alt"></i> 收货地址
+                        </li>
+                    </ul>
+                </aside>
+
+                <!-- 内容区域 -->
+                <div class="profile-tabs">
+                    <!-- 订单列表 -->
+                    <div class="tab-content active" id="orders">
+                        <div class="tab-header">
+                            <h3>我的订单</h3>
+                            <div class="order-filter">
+                                <button class="active">全部</button>
+                                <button>待付款</button>
+                                <button>待发货</button>
+                                <button>待收货</button>
+                                <button>待评价</button>
+                            </div>
+                        </div>
+                        <div class="order-list">
+                            <!-- 订单项 -->
+                            <div class="order-item">
+                                <div class="order-header">
+                                    <span class="order-date">2024-01-27</span>
+                                    <span class="order-number">订单号：2024012710086</span>
+                                    <span class="order-status">待发货</span>
+                                </div>
+                                <div class="order-content">
+                                    <div class="order-product">
+                                        <img src="images/products/paper-cut/zodiac.jpg" alt="十二生肖剪纸">
+                                        <div class="product-info">
+                                            <h4>十二生肖剪纸</h4>
+                                            <p class="price">¥288</p>
+                                            <p class="quantity">数量：1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <span class="total">总计：¥288</span>
+                                    <div class="order-actions">
+                                        <button class="btn-primary">查看物流</button>
+                                        <button class="btn-secondary">确认收货</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 收藏夹 -->
+                    <div class="tab-content" id="favorites">
+                        <div class="tab-header">
+                            <h3>我的收藏</h3>
+                            <div class="favorite-filter">
+                                <button class="active">全部</button>
+                                <button>商品</button>
+                                <button>文章</button>
+                            </div>
+                        </div>
+                        <div class="favorite-grid">
+                            <!-- 收藏的商品 -->
+                            <div class="favorite-item">
+                                <img src="images/products/ceramics/vase.jpg" alt="青花瓷花瓶">
+                                <div class="favorite-info">
+                                    <h4>青花瓷花瓶</h4>
+                                    <p class="price">¥1688</p>
+                                    <div class="favorite-actions">
+                                        <button class="btn-primary">查看详情</button>
+                                        <button class="btn-secondary"><i class="fas fa-heart"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 消息通知 -->
+                    <div class="tab-content" id="messages">
+                        <div class="tab-header">
+                            <h3>消息通知</h3>
+                            <div class="message-filter">
+                                <button class="active">全部</button>
+                                <button>系统通知</button>
+                                <button>订单消息</button>
+                                <button>互动消息</button>
+                            </div>
+                        </div>
+                        <div class="message-list">
+                            <!-- 消息项 -->
+                            <div class="message-item unread">
+                                <div class="message-icon">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <div class="message-content">
+                                    <h4>订单发货通知</h4>
+                                    <p>您购买的"十二生肖剪纸"已发货，请注意查收。</p>
+                                    <span class="message-time">2024-01-27 14:30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 账号设置 -->
+                    <div class="tab-content" id="settings">
+                        <div class="tab-header">
+                            <h3>账号设置</h3>
+                        </div>
+                        <div class="settings-form">
+                            <form>
+                                <div class="form-group">
+                                    <label>用户名</label>
+                                    <input type="text" value="张三">
+                                </div>
+                                <div class="form-group">
+                                    <label>手机号</label>
+                                    <input type="tel" value="138****8888">
+                                    <button type="button" class="btn-secondary">修改</button>
+                                </div>
+                                <div class="form-group">
+                                    <label>邮箱</label>
+                                    <input type="email" value="zhangsan@example.com">
+                                    <button type="button" class="btn-secondary">修改</button>
+                                </div>
+                                <div class="form-group">
+                                    <label>密码</label>
+                                    <input type="password" value="********">
+                                    <button type="button" class="btn-secondary">修改</button>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn-primary">保存修改</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- 收货地址 -->
+                    <div class="tab-content" id="address">
+                        <div class="tab-header">
+                            <h3>收货地址</h3>
+                            <button class="btn-primary"><i class="fas fa-plus"></i> 新增地址</button>
+                        </div>
+                        <div class="address-list">
+                            <!-- 地址项 -->
+                            <div class="address-item">
+                                <div class="address-content">
+                                    <div class="address-tags">
+                                        <span class="tag-default">默认</span>
+                                        <span class="tag-home">家</span>
+                                    </div>
+                                    <h4>张三 138****8888</h4>
+                                    <p>浙江省杭州市西湖区文化创意园A座1001室</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn-secondary">编辑</button>
+                                    <button class="btn-secondary">删除</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于我们</h4>
+                    <p>遗常在致力于传承和发展中国非物质文化遗产，搭建非遗物品交易和文化交流的平台。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>
+                        <i class="fas fa-phone"></i> 400-123-4567<br>
+                        <i class="fas fa-envelope"></i> contact@yichangzai.com
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 遗常在. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/profile.js"></script>
+
+    <!-- 地址编辑模态框 -->
+    <div class="modal" id="addressModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>编辑收货地址</h3>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="addressForm">
+                    <div class="form-group">
+                        <label>收货人</label>
+                        <input type="text" name="name" required placeholder="请输入收货人姓名">
+                    </div>
+                    <div class="form-group">
+                        <label>手机号码</label>
+                        <input type="tel" name="phone" required placeholder="请输入手机号码" pattern="[0-9]{11}">
+                    </div>
+                    <div class="form-group">
+                        <label>所在地区</label>
+                        <div class="region-select">
+                            <select name="province" required>
+                                <option value="">请选择省份</option>
+                            </select>
+                            <select name="city" required>
+                                <option value="">请选择城市</option>
+                            </select>
+                            <select name="district" required>
+                                <option value="">请选择区县</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>详细地址</label>
+                        <textarea name="address" required placeholder="请输入详细地址，如街道名称、门牌号等"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>地址标签</label>
+                        <div class="tag-select">
+                            <label class="tag-option">
+                                <input type="radio" name="tag" value="home" checked>
+                                <span>家</span>
+                            </label>
+                            <label class="tag-option">
+                                <input type="radio" name="tag" value="company">
+                                <span>公司</span>
+                            </label>
+                            <label class="tag-option">
+                                <input type="radio" name="tag" value="school">
+                                <span>学校</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="isDefault">
+                            设为默认收货地址
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancelAddress">取消</button>
+                <button class="btn-primary" id="saveAddress">保存</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

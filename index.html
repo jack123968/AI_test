@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遗常在 - 非遗物品交易交流平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>遗常在</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="market.html">交易市场</a></li>
+                    <li><a href="forum.html">交流论坛</a></li>
+                    <li><a href="culture.html">非遗文化</a></li>
+                    <li><a href="profile.html">个人中心</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 搜索区域 -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" placeholder="搜索非遗物品、文化、话题...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 轮播图 -->
+    <section class="slider-section">
+        <div class="container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="images/slide1.jpg" alt="传统剪纸艺术">
+                    <div class="slide-content">
+                        <h2>传统剪纸艺术</h2>
+                        <p>千年传承的民间艺术，展现精湛的手工技艺</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slide2.jpg" alt="景德镇陶瓷">
+                    <div class="slide-content">
+                        <h2>景德镇陶瓷</h2>
+                        <p>千年瓷都，传承匠心工艺</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slide3.jpg" alt="苏绣艺术">
+                    <div class="slide-content">
+                        <h2>苏绣艺术</h2>
+                        <p>针针入微，绣出东方神韵</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots"></div>
+        </div>
+    </section>
+
+    <!-- 公告栏 -->
+    <section class="announcement-section">
+        <div class="container">
+            <div class="announcement-header">
+                <h3><i class="fas fa-bullhorn"></i> 最新公告</h3>
+            </div>
+            <div class="announcement-content">
+                <ul>
+                    <li>
+                        <span class="date">2024-01-27</span>
+                        <a href="#">关于加强非遗物品交易安全的重要通知</a>
+                    </li>
+                    <li>
+                        <span class="date">2024-01-26</span>
+                        <a href="#">春节期间非遗文化展览活动预告</a>
+                    </li>
+                    <li>
+                        <span class="date">2024-01-25</span>
+                        <a href="#">非遗传承人在线课程计划发布</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色产品展示 -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>特色产品</h2>
+                <a href="market.html" class="view-all">查看全部 <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/paper-cut/zodiac.jpg" alt="十二生肖剪纸">
+                        <div class="product-tags">
+                            <span class="tag">剪纸</span>
+                            <span class="tag">热销</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>十二生肖剪纸</h3>
+                        <p class="price">¥288</p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-eye"></i> 1280</span>
+                            <span><i class="fas fa-shopping-cart"></i> 46</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/ceramics/vase.jpg" alt="青花瓷花瓶">
+                        <div class="product-tags">
+                            <span class="tag">陶瓷</span>
+                            <span class="tag">精品</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>青花瓷花瓶</h3>
+                        <p class="price">¥1688</p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-eye"></i> 960</span>
+                            <span><i class="fas fa-shopping-cart"></i> 32</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/embroidery/painting.jpg" alt="苏绣山水画">
+                        <div class="product-tags">
+                            <span class="tag">刺绣</span>
+                            <span class="tag">新品</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>苏绣山水画</h3>
+                        <p class="price">¥2988</p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-eye"></i> 756</span>
+                            <span><i class="fas fa-shopping-cart"></i> 28</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/wood/screen.jpg" alt="东阳木雕屏风">
+                        <div class="product-tags">
+                            <span class="tag">木雕</span>
+                            <span class="tag">限量</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>东阳木雕屏风</h3>
+                        <p class="price">¥4988</p>
+                        <div class="product-meta">
+                            <span><i class="fas fa-eye"></i> 628</span>
+                            <span><i class="fas fa-shopping-cart"></i> 15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 非遗文化推荐 -->
+    <section class="culture-recommendation">
+        <div class="container">
+            <div class="section-header">
+                <h2>非遗文化</h2>
+                <a href="culture.html" class="view-all">了解更多 <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="culture-grid">
+                <div class="culture-card">
+                    <div class="culture-image">
+                        <img src="images/culture/ceramics.jpg" alt="景德镇陶瓷文化">
+                    </div>
+                    <div class="culture-content">
+                        <h3>景德镇陶瓷文化</h3>
+                        <p>探索千年窑火中的匠心传承</p>
+                        <a href="culture.html" class="read-more">阅读详情 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="culture-card">
+                    <div class="culture-image">
+                        <img src="images/culture/paper-cut.jpg" alt="中国剪纸艺术">
+                    </div>
+                    <div class="culture-content">
+                        <h3>中国剪纸艺术</h3>
+                        <p>剪出精彩，传承文化瑰宝</p>
+                        <a href="culture.html" class="read-more">阅读详情 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="culture-card">
+                    <div class="culture-image">
+                        <img src="images/culture/embroidery.jpg" alt="苏绣文化">
+                    </div>
+                    <div class="culture-content">
+                        <h3>苏绣文化</h3>
+                        <p>针线间的艺术，绣出东方神韵</p>
+                        <a href="culture.html" class="read-more">阅读详情 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于我们</h4>
+                    <p>遗常在致力于传承和发展中国非物质文化遗产，搭建非遗物品交易和文化交流的平台。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>
+                        <i class="fas fa-phone"></i> 400-123-4567<br>
+                        <i class="fas fa-envelope"></i> contact@yichangzai.com
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 遗常在. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

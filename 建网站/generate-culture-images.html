@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成文化页面图片</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-container {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        canvas {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            background: #e53e3e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #c53030;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>生成文化页面图片</h1>
+        <div class="image-grid">
+            <!-- 横幅图片 -->
+            <div class="image-container">
+                <canvas id="bannerCanvas" width="1200" height="400"></canvas>
+                <button onclick="downloadImage('bannerCanvas', 'banner.jpg')">下载横幅图片</button>
+            </div>
+            <!-- 陶瓷图片 -->
+            <div class="image-container">
+                <canvas id="ceramicsCanvas" width="600" height="400"></canvas>
+                <button onclick="downloadImage('ceramicsCanvas', 'ceramics.jpg')">下载陶瓷图片</button>
+            </div>
+            <!-- 刺绣图片 -->
+            <div class="image-container">
+                <canvas id="embroideryCanvas" width="600" height="400"></canvas>
+                <button onclick="downloadImage('embroideryCanvas', 'embroidery.jpg')">下载刺绣图片</button>
+            </div>
+            <!-- 剪纸图片 -->
+            <div class="image-container">
+                <canvas id="paperCutCanvas" width="600" height="400"></canvas>
+                <button onclick="downloadImage('paperCutCanvas', 'paper-cut.jpg')">下载剪纸图片</button>
+            </div>
+            <!-- 国画图片 -->
+            <div class="image-container">
+                <canvas id="paintingCanvas" width="600" height="400"></canvas>
+                <button onclick="downloadImage('paintingCanvas', 'painting.jpg')">下载国画图片</button>
+            </div>
+            <!-- 针灸图片 -->
+            <div class="image-container">
+                <canvas id="acupunctureCanvas" width="600" height="400"></canvas>
+                <button onclick="downloadImage('acupunctureCanvas', 'acupuncture.jpg')">下载针灸图片</button>
+            </div>
+            <!-- 端午节图片 -->
+            <div class="image-container">
+                <canvas id="dragonBoatCanvas" width="600" height="400"></canvas>
+                <button onclick="downloadImage('dragonBoatCanvas', 'dragon-boat.jpg')">下载端午节图片</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 生成随机颜色
+        function getRandomColor(baseHue) {
+            return `hsl(${baseHue}, ${40 + Math.random() * 20}%, ${60 + Math.random() * 20}%)`;
+        }
+
+        // 绘制中国传统纹样
+        function drawPattern(ctx, x, y, size, color) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.beginPath();
+            // 绘制祥云纹样
+            ctx.moveTo(0, 0);
+            ctx.bezierCurveTo(size/4, -size/4, size/2, -size/4, size, 0);
+            ctx.bezierCurveTo(size*0.8, size/4, size/2, size/4, 0, 0);
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            ctx.restore();
+        }
+
+        // 绘制横幅图片
+        function drawBanner() {
+            const canvas = document.getElementById('bannerCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 渐变背景
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#d4a373');
+            gradient.addColorStop(1, '#8b5e34');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制传统纹样
+            for(let i = 0; i < 20; i++) {
+                drawPattern(
+                    ctx,
+                    Math.random() * canvas.width,
+                    Math.random() * canvas.height,
+                    50,
+                    'rgba(255,255,255,0.1)'
+                );
+            }
+        }
+
+        // 绘制陶瓷图片
+        function drawCeramics() {
+            const canvas = document.getElementById('ceramicsCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 背景
+            ctx.fillStyle = '#e8f4f8';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制青花瓷样式
+            ctx.fillStyle = '#1e40af';
+            for(let i = 0; i < 10; i++) {
+                drawPattern(
+                    ctx,
+                    Math.random() * canvas.width,
+                    Math.random() * canvas.height,
+                    40,
+                    '#1e40af'
+                );
+            }
+        }
+
+        // 绘制刺绣图片
+        function drawEmbroidery() {
+            const canvas = document.getElementById('embroideryCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 背景
+            ctx.fillStyle = '#fdf2f8';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制刺绣花纹
+            for(let i = 0; i < 12; i++) {
+                const color = getRandomColor(330); // 粉色系
+                drawPattern(ctx, 
+                    Math.random() * canvas.width,
+                    Math.random() * canvas.height,
+                    30,
+                    color
+                );
+            }
+        }
+
+        // 绘制剪纸图片
+        function drawPaperCut() {
+            const canvas = document.getElementById('paperCutCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 红色背景
+            ctx.fillStyle = '#dc2626';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制剪纸图案
+            ctx.fillStyle = '#fecaca';
+            for(let i = 0; i < 8; i++) {
+                drawPattern(
+                    ctx,
+                    Math.random() * canvas.width,
+                    Math.random() * canvas.height,
+                    60,
+                    '#fff'
+                );
+            }
+        }
+
+        // 绘制国画图片
+        function drawPainting() {
+            const canvas = document.getElementById('paintingCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 米色背景
+            ctx.fillStyle = '#faf6f1';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制水墨效果
+            for(let i = 0; i < 15; i++) {
+                drawPattern(
+                    ctx,
+                    Math.random() * canvas.width,
+                    Math.random() * canvas.height,
+                    45,
+                    'rgba(0,0,0,0.3)'
+                );
+            }
+        }
+
+        // 绘制针灸图片
+        function drawAcupuncture() {
+            const canvas = document.getElementById('acupunctureCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 浅绿色背景
+            ctx.fillStyle = '#ecfdf5';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制经络图案
+            for(let i = 0; i < 10; i++) {
+                drawPattern(
+                    ctx,
+                    Math.random() * canvas.width,
+                    Math.random() * canvas.height,
+                    50,
+                    '#059669'
+                );
+            }
+        }
+
+        // 绘制端午节图片
+        function drawDragonBoat() {
+            const canvas = document.getElementById('dragonBoatCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 蓝色背景代表水面
+            const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            gradient.addColorStop(0, '#bae6fd');
+            gradient.addColorStop(1, '#0284c7');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制波浪纹
+            for(let i = 0; i < 12; i++) {
+                drawPattern(
+                    ctx,
+                    Math.random() * canvas.width,
+                    Math.random() * canvas.height,
+                    40,
+                    'rgba(255,255,255,0.2)'
+                );
+            }
+        }
+
+        // 下载图片
+        function downloadImage(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/jpeg', 0.8);
+            link.click();
+        }
+
+        // 页面加载完成后生成所有图片
+        window.onload = function() {
+            drawBanner();
+            drawCeramics();
+            drawEmbroidery();
+            drawPaperCut();
+            drawPainting();
+            drawAcupuncture();
+            drawDragonBoat();
+        };
+    </script>
+</body>
+</html> 
